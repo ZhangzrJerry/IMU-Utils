@@ -107,7 +107,7 @@ The repo is under MIT License.
 ### All Sources
 
 | Module | Source | Licence |
-| - | - | - |
+| :-: | - | :-: |
 |`imu_utils`|https://github.com/gaowenliang/imu_utils| MIT |
 |`code_utils`|https://github.com/gaowenliang/code_utils| N/A |
 |`vio_data_simulation`|https://github.com/HeYijia/vio_data_simulation/tree/ros_version| N/A|
