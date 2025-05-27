@@ -14,22 +14,6 @@
 - Integrated Python code for visualizing Allan curves
 - Provided instructions for building the corresponding Docker container and code for a node that generates simulated IMU data, making the entire tool ready to use *out of the box*
 
-## All code sources
-
-| Module | Source |
-| - | - |
-|`imu_utils`|https://github.com/gaowenliang/imu_utils|
-|`code_utils`|https://github.com/gaowenliang/code_utils|
-|`vio_data_simulation`|https://github.com/HeYijia/vio_data_simulation/tree/ros_version|
-
-## All changes to the code
-
-1. `code_utils/src/*.cpp`: modify `CV_MINMAX` to `CV_MMX`, modify `CV_LOAD_IMAGE_UNCHANGED` to `IMREAD_UNCHANGED`
-2. `code_utils/CMakeLists.txt`: add include path `include_directories("include/code_utils")`
-3. Create `imu_utils/launch/imu.launch` to get imu data from `rosbag play`
-4. `vio_data_simulation/src/imu.cpp/IMU::testImu()`: modify Euler integral to median integral
-5. Modify `imu_utils/scripts/*.m` to `imu_utils/scripts/matlab/*.m` and add `imu_utils/scripts/python/*.py`
-
 ## Quick Start
 
 ### Environment Setup
@@ -115,3 +99,23 @@ Then just waiting for `imu_utils` to finish
 ![](./assets/imu.png)
 
 ![](./assets/imusim.png)
+
+## License
+
+The repo is under MIT License.
+
+### All Sources
+
+| Module | Source | Licence |
+| - | - | - |
+|`imu_utils`|https://github.com/gaowenliang/imu_utils| MIT |
+|`code_utils`|https://github.com/gaowenliang/code_utils| N/A |
+|`vio_data_simulation`|https://github.com/HeYijia/vio_data_simulation/tree/ros_version| N/A|
+
+### All Changes
+
+1. `code_utils/src/*.cpp`: modify `CV_MINMAX` to `CV_MMX`, modify `CV_LOAD_IMAGE_UNCHANGED` to `IMREAD_UNCHANGED`
+2. `code_utils/CMakeLists.txt`: add include path `include_directories("include/code_utils")`
+3. Create `imu_utils/launch/imu.launch` to get imu data from `rosbag play`
+4. `vio_data_simulation/src/imu.cpp/IMU::testImu()`: modify Euler integral to median integral
+5. Modify `imu_utils/scripts/*.m` to `imu_utils/scripts/matlab/*.m` and add `imu_utils/scripts/python/*.py`
